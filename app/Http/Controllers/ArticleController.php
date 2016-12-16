@@ -20,6 +20,12 @@ class ArticleController extends Controller
     public function store(Request $request){
         $data = $request->all();
         $article = new Article();
+        if(empty($data['id'])){
+            $article = new Article();
+        }else{
+            $article = Article::find($data);
+        }
+        var_dump($article);
         $article->title = $data["title"];
         $article->description = $data["description"];
         $article->body = $data["body"];

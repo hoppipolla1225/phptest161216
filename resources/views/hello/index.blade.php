@@ -2,5 +2,5 @@
   @extends('layout')
   <!-- ここからyield -->
   <h1>Hello world.</h1>
-  <!-- yieldここまで -->>
+  <!-- yieldここまで -->
 </html>

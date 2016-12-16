@@ -3,7 +3,11 @@
     @section('content')
     <h2>記事作成フォーム</h2>
     {!! Form::open(['action'=>'ArticleController@store']) !!}
-        <div class="form-group">
+    <div class="form-group">
+        {!! Form::label('id', 'ID：') !!}
+        {!! Form::text('id', $article->id, ['class' => 'form-control']) !!}
+    </div>
+            <div class="form-group">
             {!! Form::label('title', 'タイトル：') !!}
             {!! Form::text('title', $article->title, ['class' => 'form-control']) !!}
         </div>
